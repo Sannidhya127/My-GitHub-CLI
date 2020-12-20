@@ -30,6 +30,12 @@ if __name__ == "__main__":
         except Exception as e:
             print(e)
     else:
-        print("All set")
-    # for repo in user.get_repos():
-    #     print(repo.name)
+        while True:
+            mainPath = os.getcwd()
+            comd = input(f"{mainPath}: ")
+            if comd == "help":
+                print("No help available")
+            elif comd == "exit":
+                exit()
+            else:
+                print(f"bash: {comd}: no such command")
